@@ -8,7 +8,7 @@ public boolean win=false;
 
 void setup ()
 {
-    size(400, 400);
+    size(600, 600);
     textAlign(CENTER,CENTER);
     // make the manager
     Interactive.make( this );
@@ -22,7 +22,7 @@ void setup ()
 }
 public void setBombs()
 {
-    for(int i=1; i<=20; i++)
+    for(int i=1; i<=40; i++)
     {
     int row = (int)(Math.random()*NUM_ROWS);
     int col = (int)(Math.random()*NUM_COLS);
@@ -94,13 +94,13 @@ public class MSButton
 {
     private int r, c;
     private float x,y, width, height;
-    private boolean clicked, marked, occupied;
+    private boolean clicked, marked;
     private String label;
     
     public MSButton ( int rr, int cc )
     {
-        width = 400/NUM_COLS;
-        height = 400/NUM_ROWS;
+        width = 600/NUM_COLS;
+        height = 600/NUM_ROWS;
         r = rr;
         c = cc; 
         x = c*width;
@@ -121,7 +121,6 @@ public class MSButton
 
     public void mousePressed () 
     {
-          if(gameOver) return;
           if(mouseButton == LEFT && gameOver == false && win == false && !isMarked())
                 clicked=true;
           if(mouseButton == RIGHT && gameOver == false && win == false && isClicked()==false)
