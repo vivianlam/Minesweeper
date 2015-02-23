@@ -135,7 +135,7 @@ public class MSButton
         else if(countBombs(r,c) > 0)
         {
             if(isMarked()==false)
-            this.setLabel(Integer.toString(this.countBombs(r,c)));
+            label = "" + countBombs(r, c);
             else if(isMarked()==true)
             clicked=!clicked;
         }
