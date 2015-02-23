@@ -121,7 +121,7 @@ public class MSButton
 
     public void mousePressed () 
     {
-          if(mouseButton == LEFT && gameOver == false && win == false && !isMarked())
+          if(mouseButton == LEFT && gameOver == false && win == false && isMarked()==false)
                 clicked=true;
           if(mouseButton == RIGHT && gameOver == false && win == false && isClicked()==false)
           {
